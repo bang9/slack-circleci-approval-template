@@ -7,6 +7,7 @@ Slack Incoming hook url - https://api.slack.com/messaging/webhooks#posting_with_
 ```dotenv
 SLACK_HOOK_URL=
 CIRCLECI_TOKEN=
+APPROVAL_JOB_NAME=
 ```
 
 ---

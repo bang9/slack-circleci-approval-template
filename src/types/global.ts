@@ -5,6 +5,7 @@ declare global {
         interface ProcessEnv {
             SLACK_HOOK_URL: string;
             CIRCLECI_TOKEN: string;
+            APPROVAL_JOB_NAME: string;
         }
     }
 }

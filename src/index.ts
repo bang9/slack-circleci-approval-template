@@ -56,7 +56,7 @@ server.listen(8080, () => {
             await slack.requestMessage({ blocks, replace_original: true }, originalPayload.response_url);
         })
         .on(SlackAction.approve_production, async ({ value: workflowId }, originalPayload) => {
-            const approvalJobName = "approve-production";
+            const approvalJobName = process.env.APPROVAL_JOB_NAME;
             await circleci.approveJob(workflowId, approvalJobName);
 
             const blocks = originalPayload.message.blocks;
